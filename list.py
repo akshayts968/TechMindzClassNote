@@ -145,10 +145,10 @@
 
 # tuple
 
-# collection of data
+# # collection of data
 
-data = (0,2,3,4,"hi",3.4)
-# data[0] = "das" # Error tuple immutable
+# data = (0,2,3,4,"hi",3.4)
+# # data[0] = "das" # Error tuple immutable
 
-print(data)
-print(type(data))
+# print(data)
+# print(type(data))
