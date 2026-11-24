@@ -92,33 +92,49 @@
 # avgofmarks()
 # display()
 
-# class Student:
-#     def __init__(self,name,m1,m2,m3,m4,m5):
-#         self.name = name
-#         self.m1 = m1
-#         self.m2 = m2
-#         self.m3 = m3
-#         self.m4 = m4
-#         self.m5 = m5
-#         # self.sum = self.m1 + self.m2 + self.m3 + self.m4 + self.m5
-#     def sum_of_marks(self):
-#         sum = self.m1 + self.m2 + self.m3 + self.m4 + self.m5
-#         print(f"{self.name} has a Total of {sum} out of 250")
-#     def average_of_marks(self):
-#             sum = self.m1 + self.m2 + self.m3 + self.m4 + self.m5
-#             avg = sum / 5
-#             print(f"{self.name} has an Average of {avg}")
+class Student:
+    division = "10B"  # Class Variables/Static Variables
+    def __init__(self,name,m1,m2,m3,m4,m5):
+        # Instance Variables
+        self.name = name
+        self.m1 = m1
+        self.m2 = m2
+        self.m3 = m3
+        self.m4 = m4
+        self.m5 = m5
+        # self.sum = self.m1 + self.m2 + self.m3 + self.m4 + self.m5
+    def sum_of_marks(self):
+        sum = self.m1 + self.m2 + self.m3 + self.m4 + self.m5
+        print(f"{self.name} has a Total of {sum} out of 250")
+    def average_of_marks(self):
+            sum = self.m1 + self.m2 + self.m3 + self.m4 + self.m5
+            avg = sum / 5
+            print(f"{self.name} has an Average of {avg}")
 
-#     def display(self):
-#          print(f"Student name : {self.name}")
-#          print(f"M1 : {self.m1}\nM2 : {self.m2}\nM3 : {self.m3}\nM4 : {self.m4}\nM5 : {self.m5}")
-#          self.sum_of_marks()
-#          self.average_of_marks()
-#         #  print(self.sum)
-# E = Student("Eashwar",45,50,38,40,36)
-# # E.sum_of_marks()
-# # E.average_of_marks()
-# E.display()
+    def display(self):
+         print(f"Student name : {self.name}")
+         print(f"M1 : {self.m1}\nM2 : {self.m2}\nM3 : {self.m3}\nM4 : {self.m4}\nM5 : {self.m5}")
+         self.sum_of_marks()
+         self.average_of_marks()
+        #  print(self.sum)
+    @classmethod
+    def change_division(cls):
+        cls.division = "10C"
+    @staticmethod
+    def factorial():
+         print("Mohan")
+E = Student("Eashwar",45,50,38,40,36)
+# E.sum_of_marks()
+# E.average_of_marks()
+E.display()
+E.change_division()
+# Student.change_division()
+print(E.division)
+E.factorial()
+
+# Class variables and methods can be called using object or Class
+# Instance Variables can only change using object 
+
 
 
 
